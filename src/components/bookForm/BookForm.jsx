@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';// eslint-disable-line import/no-extraneous-dependencies
+import PropTypes from 'prop-types';
 import './BookForm.css';
 
 function BookForm({ createBook }) {
