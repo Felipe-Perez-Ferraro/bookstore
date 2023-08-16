@@ -1,0 +1,19 @@
+.home__section {
+  height: calc(100vh - 70px);
+  background-color: var(--tertiary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__section__title {
+  font-size: 40px;
+  color: var(--quaternary-color);
+}
+
+.home__section__paragraph {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+}
