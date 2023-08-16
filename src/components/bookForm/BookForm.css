@@ -1,0 +1,39 @@
+.form__section__container {
+  padding-top: 20px;
+}
+
+.book__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 250px;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.book__form__input {
+  outline: none;
+  border: 1px;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.book__form__button {
+  cursor: pointer;
+  width: 30%; 
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--quaternary-color);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.book__form__button:hover {
+  background-color: var(--primary-color);
+}
