@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import BookForm from '../../components/bookForm/BookForm';
 import BookList from '../../components/bookList/BookList';
 import './Categories.css';
+import { addBook, removeBook } from '../../redux/books/booksSlice';
 
 function Categories() {
-  const [books, setBooks] = useState([]);
+  const books = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
+
   const createBook = (book) => {
-    setBooks([
-      ...books,
-      {
-        title: book.title,
-        id: books.length,
-      },
-    ]);
+    dispatch(addBook(book));
   };
 
   const deleteBook = (bookId) => {
-    setBooks(books.filter((book) => book.id !== bookId));
+    dispatch(removeBook(bookId));
   };
 
   return (
