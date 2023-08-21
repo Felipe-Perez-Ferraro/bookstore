@@ -18,13 +18,17 @@
 }
 
 .bookCard {
-  width: 200px;
+  width: 180px;
   background-color: var(--secondary-color);
   padding: 8px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .buttonCard__deleteBtn {
+  cursor: pointer;
   outline: none;
   border: none;
   padding: 4px 10px;
