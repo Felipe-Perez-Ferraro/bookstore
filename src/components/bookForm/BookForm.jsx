@@ -5,15 +5,18 @@ import './BookForm.css';
 function BookForm({ createBook }) {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
+  const [author, setAuthor] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     createBook({
       title,
+      author,
       category,
     });
     setTitle('');
     setCategory('');
+    setAuthor('');
   };
 
   return (
@@ -25,6 +28,13 @@ function BookForm({ createBook }) {
             placeholder="Add a Book"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
+            className="book__form__input"
+          />
+          <input
+            type="text"
+            placeholder="Author"
+            onChange={(e) => setAuthor(e.target.value)}
+            value={author}
             className="book__form__input"
           />
           <input
