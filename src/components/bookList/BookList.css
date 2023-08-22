@@ -18,13 +18,25 @@
 }
 
 .bookCard {
-  width: 180px;
+  width: 200px;
   background-color: var(--secondary-color);
   padding: 8px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.bookCard__title {
+  font-size: 20px;
+}
+
+.bookCard__category {
+  font-size: 14px;
+}
+
+.bookCard__bold {
+  font-weight: 700;
 }
 
 .buttonCard__deleteBtn {
