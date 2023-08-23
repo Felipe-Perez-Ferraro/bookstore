@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import './BookForm.css';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../../redux/books/booksSlice';
 
-function BookForm({ createBook }) {
+function BookForm() {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
   const [author, setAuthor] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createBook({
+    const newBook = {
       title,
       author,
       category,
-    });
+    };
+    dispatch(addBook(newBook));
     setTitle('');
     setCategory('');
     setAuthor('');
@@ -52,9 +55,5 @@ function BookForm({ createBook }) {
     </section>
   );
 }
-
-BookForm.propTypes = {
-  createBook: PropTypes.func.isRequired,
-};
 
 export default BookForm;
