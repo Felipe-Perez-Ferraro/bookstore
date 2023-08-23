@@ -8,6 +8,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Categories from './pages/categories/Categories';
 import Home from './pages/home/Home';
+import Users from './pages/users/Users';
 
 function App() {
   const [activeLink, setActiveLink] = useState('home');
@@ -21,6 +22,8 @@ function App() {
       setActiveLink('home');
     } else if (path === '/categories') {
       setActiveLink('categories');
+    } else if (path === '/users') {
+      setActiveLink('users');
     }
   }, []);
 
@@ -51,6 +54,17 @@ function App() {
               >
                 Categories
               </Link>
+              <Link
+                to="users"
+                className={
+                  activeLink === 'users'
+                    ? 'activeLink'
+                    : 'header__link__item'
+                }
+                onClick={() => handleClick('users')}
+              >
+                Users
+              </Link>
             </ul>
           </nav>
         </header>
@@ -58,6 +72,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="categories" element={<Categories />} />
+        <Route path="users" element={<Users />} />
       </Routes>
     </Router>
   );
