@@ -33,7 +33,7 @@ function Users() {
                   </span>
                   {user.name.first}
                   {' '}
-                  {user.name.first}
+                  {user.name.last}
                 </p>
               </li>
             ))}
