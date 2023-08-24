@@ -47,11 +47,17 @@ function BookCard({
           </div>
         </div>
         <div className="bookCard__progress__container">
-          <h2 className="bookCard__progress">
-            {progress}
-            %
-          </h2>
-          <p className="bookCard__completed">completed</p>
+          <svg className="bookCard__progress__circleContainer">
+            <circle className="bookCard__progress__circle" cx="60" cy="60" r="40" />
+            <circle className="bookCard__progress__circleComplete" style={{ strokeDashoffset: `calc(260 - (260 * ${progress})/100)` }} cx="60" cy="60" r="40" />
+          </svg>
+          <div className="bookCard__progress__right">
+            <h2 className="bookCard__progress">
+              {progress}
+              %
+            </h2>
+            <p className="bookCard__completed">completed</p>
+          </div>
         </div>
       </div>
       <div className="bookCard__chapter__container">
