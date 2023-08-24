@@ -5,8 +5,8 @@ import './Categories.css';
 function Categories() {
   return (
     <main className="main__section">
-      <BookForm />
       <BookList />
+      <BookForm />
     </main>
   );
 }
