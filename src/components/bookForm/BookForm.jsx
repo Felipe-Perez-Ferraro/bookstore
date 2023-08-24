@@ -25,6 +25,7 @@ function BookForm() {
   return (
     <section className="form__section">
       <article className="form__section__container">
+        <h2 className="form__section__title">ADD NEW BOOK</h2>
         <form onSubmit={handleSubmit} className="book__form">
           <input
             type="text"
@@ -32,6 +33,7 @@ function BookForm() {
             onChange={(e) => setTitle(e.target.value)}
             value={title}
             className="book__form__input"
+            required
           />
           <input
             type="text"
@@ -39,16 +41,23 @@ function BookForm() {
             onChange={(e) => setAuthor(e.target.value)}
             value={author}
             className="book__form__input"
+            required
           />
-          <input
+          <select
             type="text"
             placeholder="Category"
             onChange={(e) => setCategory(e.target.value)}
             value={category}
             className="book__form__input"
-          />
+            required
+          >
+            <option>Category</option>
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Fiction">Fiction</option>
+          </select>
           <button type="submit" className="book__form__button">
-            Add
+            Add Book
           </button>
         </form>
       </article>
