@@ -1,23 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../../redux/books/booksSlice';
 
-function BookCard({ book, deleteBook }) {
+function BookCard({
+  title, author, category, id,
+}) {
+  const dispatch = useDispatch();
+  const handleDelete = (bookId) => {
+    dispatch(removeBook(bookId));
+  };
+
   return (
     <div className="bookCard">
-      <h2 className="bookCard__title">{book.title}</h2>
+      <h2 className="bookCard__title">{title}</h2>
       <p className="bookCard__author">
-        <span className="bookCard__bold">Author:</span>
+        <span className="bookCard__bold">
+          Author:
+        </span>
         {' '}
-        {book.author}
+        {author}
       </p>
       <p className="bookCard__category">
-        <span className="bookCard__bold">Category:</span>
+        <span className="bookCard__bold">
+          Category:
+        </span>
         {' '}
-        {book.category}
+        {category}
       </p>
       <button
         type="button"
-        onClick={() => deleteBook(book.id)}
+        onClick={() => handleDelete(id)}
         className="buttonCard__deleteBtn"
       >
         Delete
@@ -27,13 +40,10 @@ function BookCard({ book, deleteBook }) {
 }
 
 BookCard.propTypes = {
-  deleteBook: PropTypes.func.isRequired,
-  book: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-  }).isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default BookCard;
