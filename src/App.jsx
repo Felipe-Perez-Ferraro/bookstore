@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     const path = window.location.pathname;
     if (path === '/') {
-      setActiveLink('home');
+      setActiveLink('books');
     } else if (path === '/categories') {
       setActiveLink('categories');
     }
@@ -28,17 +28,17 @@ function App() {
     <Router>
       <section className="header__section">
         <header className="header__section__container">
-          <h1 className="header__title">Bookstore</h1>
-          <nav>
+          <nav className="header__navbar__container">
             <ul className="header__links__container">
+              <h1 className="header__title">Bookstore CMS</h1>
               <Link
                 to="/"
                 className={
-                  activeLink === 'home' ? 'activeLink' : 'header__link__item'
+                  activeLink === 'books' ? 'activeLink' : 'header__link__item'
                 }
-                onClick={() => handleClick('home')}
+                onClick={() => handleClick('books')}
               >
-                Home
+                Books
               </Link>
               <Link
                 to="categories"
@@ -56,8 +56,8 @@ function App() {
         </header>
       </section>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="categories" element={<Categories />} />
+        <Route path="/" element={<Categories />} />
+        <Route path="categories" element={<Home />} />
       </Routes>
     </Router>
   );
