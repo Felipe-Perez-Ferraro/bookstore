@@ -7,7 +7,8 @@
   height: 70px;
   display: flex;
   align-items: center;
-  max-width: 800px;
+  justify-content: space-between;
+  max-width: 80vw;
   margin: 0 auto;
 }
 
@@ -25,6 +26,8 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  list-style: none;
+  margin-left: 40px;
 }
 
 .header__link__item {
@@ -51,4 +54,8 @@
   font-weight: 500;
   color: var(--gray);
   transition: all 0.3s ease-out;
+}
+
+.header__userImg {
+  width: 30px;
 }
