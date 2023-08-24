@@ -1,7 +1,7 @@
 .form__section__container {
   border-top: 1px solid var(--border);
   padding-top: 20px;
-  max-width: 800px;
+  max-width: 80vw;
   margin: 0 auto;
 }
 
