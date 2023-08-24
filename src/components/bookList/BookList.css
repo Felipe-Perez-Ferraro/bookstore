@@ -1,52 +1,132 @@
 .bookList__message {
   text-align: center;
-  color: #fff;
+  color: var(--black);
   margin-top: 10px;
 }
 
-.bookCard__section {
-  margin-top: 20px;
-}
-
-.bookCard__section__container {
-  max-width: 800px;
+.bookCard__container {
+  max-width: 80vw;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 20px;
   gap: 10px;
+  width: 100%;
+  background-color: var(--white);
+  padding: 8px;
+  border: 1px solid var(--border);
 }
 
 .bookCard {
-  width: 200px;
-  background-color: var(--secondary-color);
-  padding: 8px;
-  border-radius: 8px;
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  align-items: center;
+  width: 60%;
+  border-right: 1px solid var(--border);
+  padding-right: 40px;
 }
 
-.bookCard__title {
-  font-size: 20px;
+.bookCard__features {
+  width: 100%;
 }
 
 .bookCard__category {
-  font-size: 14px;
-}
-
-.bookCard__bold {
+  font-size: 0.8rem;
   font-weight: 700;
+  color: var(--gray);
+  margin-bottom: 4px;
 }
 
-.buttonCard__deleteBtn {
+.bookCard__title {
+  font-size: 1.3rem;
+  color: var(--black);
+}
+
+.bookCard__author {
+  color: var(--secondBlue);
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.bookCard__bar {
+  color: var(--border);
+}
+
+.buttonCard {
   cursor: pointer;
   outline: none;
+  background-color: transparent;
+  border: 0 0 0 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--secondBlue);
+}
+
+.buttonCard:hover {
+  color: #005799;
+}
+
+.bookCard__progress__container {
+  display: flex;
+  align-items: center;
+}
+
+.bookCard__progress__circleContainer {
+  align-self: center;
+  width: 120px;
+  height: 120px;
+}
+
+.bookCard__progress__circle,
+.bookCard__progress__circleComplete {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--gray);
+  stroke-width: 5;
+}
+
+.bookCard__progress__circleComplete {
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  stroke: var(--blue);
+}
+
+.bookCard__progress {
+  font-size: 2rem;
+}
+
+.bookCard__completed {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.bookCard__chapter__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bookCard__currentChapter {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.boockCard__chapter {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.chapter__btn {
+  cursor: pointer;
   border: none;
-  padding: 4px 10px;
-  background-color: var(--quaternary-color);
-  border-radius: 8px;
+  border-radius: 4px;
+  background-color: var(--buttonColor);
+  color: var(--white);
+  padding: 0.438rem 1.188rem;
   text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px;
 }

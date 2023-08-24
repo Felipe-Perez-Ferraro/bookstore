@@ -13,7 +13,7 @@ function BookList() {
   }, [dispatch]);
 
   if (books.length === 0) {
-    return <h2 className="bookList__message">There isn&lsquo;t Book yet...</h2>;
+    return <h2 className="bookList__message">There isn&lsquo;t any Book yet...</h2>;
   }
   return (
     <section className="bookCard__section">

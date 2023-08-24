@@ -1,4 +1,3 @@
 .main__section {
-  height: calc(100vh - 70px);
-  background-color: var(--tertiary-color);
+  height: calc(100vh - 71px);
 }
