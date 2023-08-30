@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,25 +7,18 @@
 }
 
 body {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background);
 }
 
 :root {
-  --primary-color: #369a6d;
-  --secondary-color: #347474;
-  --tertiary-color: #35495e;
-  --quaternary-color: #ea4124;
+  --white: #fff;
+  --background: #e6e6e68f;
+  --black: #000;
+  --blue: #0290ff;
+  --secondBlue: #4386bf;
+  --buttonColor: #0290ff;
+  --gray: #4d4d4d;
+  --thinGray: #979797;
+  --border: #dedede;
 }

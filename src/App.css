@@ -1,5 +1,6 @@
 .header__section {
-  background-color: var(--primary-color);
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
 }
 
 .header__section__container {
@@ -7,40 +8,54 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 800px;
+  max-width: 80vw;
   margin: 0 auto;
 }
 
+.header__navbar__container {
+  display: flex;
+  align-items: center;
+}
+
 .header__title {
-  font-size: 22px;
-  letter-spacing: 1px;
-  color: var(--tertiary-color);
+  font-size: 1.8rem;
+  color: var(--blue);
 }
 
 .header__links__container {
   display: flex;
   align-items: center;
   gap: 16px;
+  list-style: none;
+  margin-left: 40px;
 }
 
 .header__link__item {
   cursor: pointer;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--tertiary-color);
+  font-size: 0.8rem;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--thinGray);
   transition: all 0.3s ease-out;
 }
 
 .header__link__item:hover {
-  color: #fff;
+  color: var(--gray);
 }
 
 .activeLink {
   cursor: pointer;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--gray);
   transition: all 0.3s ease-out;
+}
+
+.header__userImg {
+  width: 30px;
 }

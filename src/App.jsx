@@ -4,8 +4,9 @@ import {
   BrowserRouter as Router,
   Routes,
 } from 'react-router-dom';
-import './App.css';
 import { useEffect, useState } from 'react';
+import userImg from './assets/user.png';
+import './App.css';
 import Categories from './pages/categories/Categories';
 import Home from './pages/home/Home';
 
@@ -18,7 +19,7 @@ function App() {
   useEffect(() => {
     const path = window.location.pathname;
     if (path === '/') {
-      setActiveLink('home');
+      setActiveLink('books');
     } else if (path === '/categories') {
       setActiveLink('categories');
     }
@@ -28,36 +29,45 @@ function App() {
     <Router>
       <section className="header__section">
         <header className="header__section__container">
-          <h1 className="header__title">Bookstore</h1>
-          <nav>
+          <nav className="header__navbar__container">
+            <h1 className="header__title">Bookstore CMS</h1>
             <ul className="header__links__container">
-              <Link
-                to="/"
-                className={
-                  activeLink === 'home' ? 'activeLink' : 'header__link__item'
-                }
-                onClick={() => handleClick('home')}
-              >
-                Home
-              </Link>
-              <Link
-                to="categories"
-                className={
-                  activeLink === 'categories'
-                    ? 'activeLink'
-                    : 'header__link__item'
-                }
-                onClick={() => handleClick('categories')}
-              >
-                Categories
-              </Link>
+              <li>
+                <Link
+                  to="/"
+                  className={
+                    activeLink === 'books' ? 'activeLink' : 'header__link__item'
+                  }
+                  onClick={() => handleClick('books')}
+                >
+                  Books
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="categories"
+                  className={
+                    activeLink === 'categories'
+                      ? 'activeLink'
+                      : 'header__link__item'
+                  }
+                  onClick={() => handleClick('categories')}
+                >
+                  Categories
+                </Link>
+              </li>
             </ul>
           </nav>
+          <figcaption>
+            <figure>
+              <img className="header__userImg" src={userImg} alt="" />
+            </figure>
+          </figcaption>
         </header>
       </section>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="categories" element={<Categories />} />
+        <Route path="/" element={<Categories />} />
+        <Route path="categories" element={<Home />} />
       </Routes>
     </Router>
   );
